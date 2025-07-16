@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: fastapi-ocr
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
