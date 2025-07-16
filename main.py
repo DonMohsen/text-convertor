@@ -5,7 +5,8 @@ import pytesseract
 import io
 import os
 from pdf2image import convert_from_bytes
-
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  # this is default on many systems
+os.environ["TESSDATA_PREFIX"] = "./tessdata"  # 👈 tell it where to look
 app = FastAPI()
 
 # Enable CORS (adjust origins as needed)
